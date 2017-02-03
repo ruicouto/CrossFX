@@ -20,15 +20,23 @@ import testfx.web.FXRequestsHandler;
 
 
 /**
- *
+ * The controller which handles the main window
  * @author ruicouto
  */
 public class FXMLDocumentController implements Initializable {
     
+    /** Enable/disable debug mode in the webview */
     private static final boolean debug = true;
+    /** Reference for the webview */
     @FXML private WebView container;
+    /** Instance of the adapter to handle requests */
     private static Adapter adapter = new Adapter();
     
+    /**
+     * Initialize the controller
+     * @param url
+     * @param rb 
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         container.getEngine().setJavaScriptEnabled(true);
