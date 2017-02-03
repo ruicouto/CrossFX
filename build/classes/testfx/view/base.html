@@ -1,0 +1,76 @@
+<html>
+    <header>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="stub.js" type="text/javascript"></script>
+               
+        
+        <script language="javascript"> 
+            function sum() {
+                var v1 = document.getElementById("v1").value;
+                var v2 = document.getElementById("v2").value;
+                document.getElementById("txt1").innerHTML = adapter.sum(v1, v2);
+            }
+
+            function salute() {
+                var v1 = document.getElementById("s1").value;
+                document.getElementById("txt2").innerHTML = adapter.salute(v1);
+            }
+
+            function toUpper() {
+                var v1 = document.getElementById("s1").value;
+                document.getElementById("txt3").innerHTML = adapter.toUpper(v1);
+            }
+
+            function source() {
+                document.getElementById("txt4").innerHTML = adapter.source();
+            }
+            
+            function a() {
+                var v1 = document.getElementById("v1").value;
+                var v2 = document.getElementById("v2").value;
+                document.getElementById("txt5").innerHTML = adapter.mult(v1,v2);
+            }
+        </script>
+    </header>
+
+    <body>
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-12">
+                    <br/>
+                    <input type="text" id="v1"/>
+                    <input type="text" id="v2"/>
+                    [<span id="txt1">_</span>]
+                    <br/>
+                    <br/> <a href='#' class="btn btn-success" onclick="sum();">sum!</a>
+                    <hr/>
+
+
+                    <input type="text" id="s1"/>
+                    <br/>
+                    [<span id="txt2">_</span>]
+                    <br/> <a href='#' class="btn btn-success" onclick="salute();">Salute!</a>
+                    <hr/>
+                    [<span id="txt3">_</span>]
+                    <br/> <a href='#' class="btn btn-success" onclick="toUpper();">To Upper!</a>
+                    <br/>
+                    [<span id="txt4">_</span>]
+                    <br/> <a href='#' class="btn btn-success" onclick="source();">Get source of the requests</a>
+                    <br/>
+                    [<span id="txt5">_</span>]
+                    <br/> <a href='#' class="btn btn-success" onclick="a();">mult</a>
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
